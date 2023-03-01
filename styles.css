@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make appearance consistent with other content */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.basic-form {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 500px;
+
+    padding: 20px;
+}
+
+.basic-form * {
+    line-height: 1.5;
+}
+
+.basic-form select,
+.basic-form input {
+    margin-bottom: 25px;
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+
+    padding: 3px;
+
+    background: #f9f9f9;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
