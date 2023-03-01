@@ -1,3 +1,11 @@
+:root {
+    --green: #14b64a;
+    --red: #d50000;
+    --light-red: #fff8f8;
+    --light-grey: #f9f9f9;
+    --border-light-grey: #dddddd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -38,25 +46,25 @@ input[type="password"] {
 .basic-form input {
     margin-bottom: 25px;
     outline: none;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--border-light-grey);
     border-radius: 5px;
 
     padding: 3px;
 
-    background-color: #f9f9f9;
+    background-color: var(--light-grey);
     transition: background-color 0.25s, border-color 0.25s, color 0.25s;
 
     font-weight: 300;
 }
 
 .basic-form input:focus:invalid {
-    color: #d50000;
-    background-color: #fff8f8;
-    border-color: #d50000;
+    color: var(--red);
+    background-color: var(--light-red);
+    border-color: var(--red);
 }
 
 .basic-form button[type="submit"] {
-    border: 1px solid #14b64a;
+    border: 1px solid var(--green);
     border-radius: 5px;
     background-color: white;
 
@@ -72,6 +80,6 @@ input[type="password"] {
 }
 
 .basic-form button[type="submit"]:hover {
-    background-color: #14b64a;
+    background-color: var(--green);
     color: white;
 }
