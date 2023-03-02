@@ -41,17 +41,16 @@ zipCodeInput.addEventListener("input", () => {
     }
 })
 
-// passwordInput.addEventListener("input", () => {
-//     // Mismatching passwords
-//     if (passwordInput.value !== passwordConfirmInput.value) {
-//         passwordError.textContent = "Your passwords don't match."
-//         passwordError.className = "error-msg active"
-//     }
-//     else {
-//         passwordError.textContent = ""
-//         passwordError.className = "error-msg"
-//     }    
-// })
+passwordInput.addEventListener("input", () => {
+    if (passwordInput.validity.valueMissing) {
+        passwordError.textContent = "Required!"
+        passwordError.className = "error-msg active"
+    }
+    else {
+        passwordError.textContent = ""
+        passwordError.className = "error-msg"
+    }
+})
 
 passwordConfirmInput.addEventListener("input", () => {
     if (passwordInput.value !== passwordConfirmInput.value) {
@@ -69,7 +68,30 @@ passwordConfirmInput.addEventListener("input", () => {
 })
 
 form.addEventListener("submit", (e) => {
-    if (!emailInput.validity.valid || !zipCodeInput.validity.valid || !doPasswordsMatch) {
-        e.preventDefault()
+    e.preventDefault()
+
+    if (!emailInput.validity.valid || !zipCodeInput.validity.valid 
+        || !passwordInput.validity.valid || !passwordConfirmInput.validity.valid 
+        || !doPasswordsMatch) {
+
+        if (emailInput.validity.valueMissing) {
+            emailError.textContent = "Required!"
+            emailError.className = "error-msg active"
+        }
+
+        if (zipCodeInput.validity.valueMissing) {
+            zipCodeError.textContent = "Required!"
+            zipCodeError.className = "error-msg active"
+        }
+
+        if (passwordInput.validity.valueMissing) {
+            passwordError.textContent = "Required!"
+            passwordError.className = "error-msg active"
+        }
+
+        if (passwordConfirmInput.validity.valueMissing) {
+            passwordConfirmError.textContent = "Required!"
+            passwordConfirmError.className = "error-msg active"
+        }
     }
 })
