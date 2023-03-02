@@ -69,15 +69,7 @@ passwordConfirmInput.addEventListener("input", () => {
 })
 
 form.addEventListener("submit", (e) => {
-    if (!emailInput.validity.valid) {
-        e.preventDefault()
-    }
-
-    if (!zipCodeInput.validity.valid) {
-        e.preventDefault()
-    }
-
-    if (!doPasswordsMatch) {
+    if (!emailInput.validity.valid || !zipCodeInput.validity.valid || !doPasswordsMatch) {
         e.preventDefault()
     }
 })
