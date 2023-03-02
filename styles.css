@@ -42,6 +42,17 @@ input[type="password"] {
     line-height: 1.5;
 }
 
+.form-msg {
+    display: none;
+
+    background-color: #d1e7dd;
+
+    padding: 10px 20px;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+}
+
 .form-section {
     margin-bottom: 25px;
     display: flex;

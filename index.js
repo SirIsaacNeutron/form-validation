@@ -93,5 +93,10 @@ form.addEventListener("submit", (e) => {
             passwordConfirmError.textContent = "Required!"
             passwordConfirmError.className = "error-msg active"
         }
+        formMessage.classList.remove("active")
+    }
+    else {
+        const formMessage = document.querySelector(".form-msg")
+        formMessage.classList.add("active")
     }
 })
