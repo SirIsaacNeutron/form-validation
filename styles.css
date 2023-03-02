@@ -42,9 +42,14 @@ input[type="password"] {
     line-height: 1.5;
 }
 
+.form-section {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
 .basic-form select,
 .basic-form input {
-    margin-bottom: 25px;
     outline: none;
     border: 1px solid var(--border-light-grey);
     border-radius: 5px;
@@ -82,4 +87,17 @@ input[type="password"] {
 .basic-form button[type="submit"]:hover {
     background-color: var(--green);
     color: white;
+}
+
+.error-msg {
+    display: none;
+    font-size: 0.9rem;
+
+    color: var(--red);
+
+    margin-top: 5px;
+}
+
+.active {
+    display: block;
 }
